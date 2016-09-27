@@ -14,6 +14,7 @@ module.exports = function(grunt) {
 				banners: {
 					full: '/*\n * <%= pkg.title || pkg.name %> - @@vVERSION\n' +
 						' * <%=pkg.homepage%>\n' +
+						' * https://github.com/VagNuAB/qTip2 \n' +
 						' *\n' +
 						' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
 						' * Released under the <%= _.pluck(pkg.licenses, "type").join(", ") %> licenses\n' +

@@ -1,12 +1,13 @@
 /*
- * qTip2 - Pretty powerful tooltips - v3.0.3
+ * qTip2 - Pretty powerful tooltips - v3.0.3-1-g
  * http://qtip2.com
+ * https://github.com/VagNuAB/qTip2 
  *
  * Copyright (c) 2016 
  * Released under the MIT licenses
  * http://jquery.org/license
  *
- * Date: Wed May 11 2016 10:31 GMT+0100+0100
+ * Date: Tue Sep 27 2016 03:10 GMT+0200+0200
  * Plugins: None
  * Styles: core
  */
@@ -448,7 +449,7 @@ CHECKS = PROTOTYPE.checks = {
 		// Position checks
 		'^position.(my|at)$': function(obj, o, v){
 			if('string' === typeof v) {
-				this.position[o] = obj[o] = new CORNER(v, o === 'at');
+				this.options.position[o] = obj[o] = new CORNER(v, o === 'at');
 			}
 		},
 		'^position.container$': function(obj, o, v){
@@ -1775,7 +1776,7 @@ function init(elem, id, opts) {
 
 	// Remove title attribute and store it if present
 	if(config.suppress && (title = elem.attr('title'))) {
-		// Final attr call fixes event delegatiom and IE default tooltip showing problem
+		// Final attr call fixes event delegation and IE default tooltip showing problem
 		elem.removeAttr('title').attr(oldtitle, title).attr('title', '');
 	}
 
@@ -1931,7 +1932,7 @@ if(!$.ui) {
 	};
 }
 ;// qTip version
-QTIP.version = '3.0.3';
+QTIP.version = '3.0.3-1-g';
 
 // Base ID for all qTips
 QTIP.nextid = 0;
